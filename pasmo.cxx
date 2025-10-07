@@ -19,7 +19,11 @@ using std::string;
 using std::vector;
 using std::runtime_error;
 
-const string pasmoversion(VERSION);
+
+// *JiK* Some hackery to make this possible with CMake.. 
+#define STRINGIZE(x) #x
+#define STRINGIZE_VALUE_OF(x) STRINGIZE(x)
+const string pasmoversion(STRINGIZE_VALUE_OF(VERSION));
 
 class Usage { };
 
