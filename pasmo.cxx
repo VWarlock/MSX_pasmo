@@ -476,11 +476,8 @@ int main(int argc, char * * argv)
     catch (Usage &)
     {
         cerr <<    "Pasmo v. " << pasmoversion <<
-            " (C) 2004-2021 Julian Albo\n\n"
-            "Usage:\n\n"
-            "\tpasmo [options] source object [symbol]\n\n"
-            "See the README file for details.\n";
-	
+            " (C) 2004-2021 Julian Albo\n\n";
+ 	
 	usage(argv[0]);	// *VWarlock*
     }
     catch (ErrorAlreadyReported)
